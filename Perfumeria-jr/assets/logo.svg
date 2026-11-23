@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Definiciones de gradientes dorados -->
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#E8C96A"/>
+      <stop offset="40%"  stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#9A7A2E"/>
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#E8C96A"/>
+      <stop offset="50%"  stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#9A7A2E"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Círculo de fondo oscuro con borde dorado -->
+  <circle cx="60" cy="60" r="56" fill="#0a0a0a" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Anillo interno decorativo -->
+  <circle cx="60" cy="60" r="50" fill="none" stroke="url(#goldGrad)" stroke-width="0.4" opacity="0.5"/>
+
+  <!-- ── CORONA ── -->
+  <!-- Base de la corona -->
+  <rect x="36" y="34" width="48" height="6" rx="2" fill="url(#goldGrad)" filter="url(#glow)"/>
+  <!-- Punta izquierda pequeña -->
+  <polygon points="36,40 40,28 44,40" fill="url(#goldGrad)"/>
+  <!-- Punta central grande -->
+  <polygon points="56,40 60,22 64,40" fill="url(#goldGrad)" filter="url(#glow)"/>
+  <!-- Punta derecha pequeña -->
+  <polygon points="76,40 80,28 84,40" fill="url(#goldGrad)"/>
+
+  <!-- Joyitas en las puntas de la corona -->
+  <circle cx="40" cy="28" r="2.5" fill="#E8C96A" filter="url(#glow)"/>
+  <circle cx="60" cy="22" r="3.2" fill="#E8C96A" filter="url(#glow)"/>
+  <circle cx="80" cy="28" r="2.5" fill="#E8C96A" filter="url(#glow)"/>
+
+  <!-- Pequeños detalles en la base de la corona -->
+  <circle cx="44" cy="37" r="1.5" fill="#0a0a0a"/>
+  <circle cx="52" cy="37" r="1.5" fill="#0a0a0a"/>
+  <circle cx="60" cy="37" r="1.5" fill="#0a0a0a"/>
+  <circle cx="68" cy="37" r="1.5" fill="#0a0a0a"/>
+  <circle cx="76" cy="37" r="1.5" fill="#0a0a0a"/>
+
+  <!-- ── LETRA J ── -->
+  <!-- Trazo vertical de la J -->
+  <rect x="30" y="48" width="8" height="42" rx="4" fill="url(#goldGrad)" filter="url(#glow)"/>
+  <!-- Curva inferior de la J -->
+  <path d="M 34 90 Q 34 102 46 102 Q 58 102 58 90 L 58 84" 
+        stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round"
+        fill="none" filter="url(#glow)"/>
+
+  <!-- ── LETRA R ── (entrelazada con la J) -->
+  <!-- Trazo vertical de la R -->
+  <rect x="58" y="48" width="8" height="54" rx="4" fill="url(#goldGrad)" filter="url(#glow)"/>
+  <!-- Panza de la R (arco superior) -->
+  <path d="M 66 50 Q 92 50 92 64 Q 92 78 66 78" 
+        stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round"
+        fill="none" filter="url(#glow)"/>
+  <!-- Pata diagonal de la R -->
+  <line x1="68" y1="76" x2="88" y2="100" 
+        stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round"
+        filter="url(#glow)"/>
+
+  <!-- Punto de intersección / decoración de unión JR -->
+  <circle cx="58" cy="72" r="5" fill="#C9A84C" filter="url(#glow)"/>
+
+  <!-- Línea decorativa inferior -->
+  <line x1="28" y1="108" x2="92" y2="108" 
+        stroke="url(#goldGrad2)" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Puntos decorativos en la línea -->
+  <circle cx="28" cy="108" r="1.8" fill="#C9A84C" opacity="0.6"/>
+  <circle cx="92" cy="108" r="1.8" fill="#C9A84C" opacity="0.6"/>
+  <circle cx="60" cy="108" r="1.2" fill="#E8C96A" opacity="0.8"/>
+</svg>
