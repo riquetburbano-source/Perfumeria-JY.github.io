@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JY PERFUMERÍA — Fragancias Exclusivas</title>
+  <meta name="description" content="Catálogo de fragancias exclusivas para hombre y mujer. JY Perfumería — Tu esencia, tu presencia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAVEGACIÓN
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo real -->
+      <a href="#inicio" class="nav-logo" aria-label="JY Perfumería - Inicio">
+        <img src="Logo - Perfumeria.jpeg" alt="JY Perfumería" class="nav-logo-img" />
+        <div class="nav-brand-block">
+          <span class="nav-brand-name">JY PERFUMERÍA</span>
+          <span class="nav-brand-sub">FRAGANCIAS EXCLUSIVAS</span>
+        </div>
+      </a>
+
+      <!-- Menú central -->
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#inicio"    class="nav-link">Inicio</a>
+        <a href="#hombres"  class="nav-link">Hombres</a>
+        <a href="#mujeres"  class="nav-link">Mujeres</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <!-- Acciones derecha -->
+      <div class="nav-actions">
+        <!-- Buscador desplegable -->
+        <div class="nav-search-wrapper" id="nav-search-wrapper">
+          <button class="nav-icon-btn" id="search-toggle-btn" onclick="toggleNavSearch()" aria-label="Buscar">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+          </button>
+          <div class="nav-search-input-wrap" id="nav-search-input-wrap">
+            <input type="search" id="nav-search-input" class="nav-search-input"
+                   placeholder="Buscar fragancia..." autocomplete="off" aria-label="Buscar fragancia" />
+            <button class="nav-search-close" onclick="toggleNavSearch()" aria-label="Cerrar búsqueda">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hamburguesa (móvil) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav-gold-line"></div>
+
+    <!-- Menú móvil -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil">
+      <a href="#inicio"   class="mobile-link" onclick="closeMenu()">Inicio</a>
+      <a href="#hombres"  class="mobile-link" onclick="closeMenu()">Hombres</a>
+      <a href="#mujeres"  class="mobile-link" onclick="closeMenu()">Mujeres</a>
+      <a href="#contacto" class="mobile-link" onclick="closeMenu()">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="hero-layout">
+      <!-- Izquierda: Texto -->
+      <div class="hero-left">
+        <div class="hero-logo-hero">
+          <img src="Logo - Perfumeria.jpeg" alt="JY Perfumería" class="hero-logo-img" />
+        </div>
+
+        <div class="hero-divider-line" aria-hidden="true">
+          <span class="hero-divider-dot"></span>
+          <span class="hero-divider-rule"></span>
+          <span class="hero-divider-dot"></span>
+        </div>
+
+        <p class="hero-brand-label">CATÁLOGO EXCLUSIVO</p>
+        <h1 class="hero-main-title">JY <em>PERFUMERÍA</em></h1>
+        <p class="hero-slogan">TU ESENCIA,<br/><em>TU PRESENCIA</em></p>
+
+        <div class="hero-cta-group">
+          <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+          <a href="#contacto" class="btn-ghost-hero">Contactar →</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">12</span>
+            <span class="stat-label">Fragancias</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Auténticos</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Colecciones</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Derecha: Collage de frascos reales -->
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-glow-halo"></div>
+        <div class="hero-bottles">
+          <div class="hero-bottle hero-bottle--back">
+            <img src="Perfumes Hombres/Versace Eros.png" alt="" />
+          </div>
+          <div class="hero-bottle hero-bottle--main">
+            <img src="Perfumes Mujeres/Scandal JPG.png" alt="" />
+          </div>
+          <div class="hero-bottle hero-bottle--side">
+            <img src="Perfumes Hombres/Nautica Voyage.png" alt="" />
+          </div>
+        </div>
+        <div class="hero-float-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Autenticidad Garantizada</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#catalogo" class="scroll-arrow" aria-label="Ver catálogo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       CATÁLOGO — Hombres y Mujeres con buscador y filtros
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="catalogo" class="catalog-section">
+    <div class="container">
+
+      <div class="section-header-centered">
+        <p class="section-eyebrow">Colección Completa</p>
+        <h2 class="section-title-gold">NUESTRAS FRAGANCIAS</h2>
+        <div class="title-underline"><span></span></div>
+        <p class="section-subtitle">Consulta el precio de cualquier fragancia directamente por WhatsApp.</p>
+      </div>
+
+      <!-- Controles -->
+      <div class="catalog-controls">
+        <div class="search-wrapper">
+          <svg class="search-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <input type="search" id="search-input" class="search-input"
+                 placeholder="Buscar perfume..." aria-label="Buscar perfume" autocomplete="off" />
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrar por categoría">
+          <button class="filter-btn active" data-category="todos"  aria-pressed="true">Todos</button>
+          <button class="filter-btn"        data-category="hombre" id="filter-hombre" aria-pressed="false">♂ Hombres</button>
+          <button class="filter-btn"        data-category="mujer"  id="filter-mujer"  aria-pressed="false">♀ Mujeres</button>
+        </div>
+      </div>
+
+      <!-- Grid de productos (lo llena catalog.js) -->
+      <div class="products-grid" id="products-grid" role="list" aria-label="Lista de fragancias"></div>
+
+      <div class="no-results" id="no-results" style="display:none;" aria-live="polite">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <p>No encontramos resultados.</p>
+        <button onclick="document.getElementById('search-input').value=''; searchProducts('');" class="btn-ghost-sm">
+          Limpiar búsqueda
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anclas de categoría para el menú (invisibles) -->
+  <div id="hombres" style="position:relative;top:-80px;visibility:hidden;"></div>
+  <div id="mujeres" style="position:relative;top:-80px;visibility:hidden;"></div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECCIÓN WHATSAPP — Antes del footer
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="wa-section" id="consultar">
+    <div class="container">
+      <div class="wa-section-inner">
+        <div class="wa-section-text">
+          <p class="section-eyebrow">¿Te interesa alguna fragancia?</p>
+          <h2 class="wa-section-title">Consulta y cuadra tu precio</h2>
+          <p class="wa-section-desc">
+            Escríbenos por WhatsApp. Te atendemos con gusto y te ayudamos a elegir
+            la fragancia perfecta para ti o para regalar.
+          </p>
+        </div>
+        <div class="wa-buttons-group">
+          <!-- Botón 1: Mi WhatsApp -->
+          <a href="https://wa.me/573126618447?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20de%20JY%20Perfumer%C3%ADa%20y%20quiero%20consultar%20precio."
+             target="_blank" rel="noopener noreferrer"
+             class="wa-btn wa-btn--primary"
+             aria-label="Contactar por WhatsApp principal">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+            <div class="wa-btn-text">
+              <span class="wa-btn-label">Mi WhatsApp</span>
+              <span class="wa-btn-number">+57 312 661 8447</span>
+            </div>
+          </a>
+
+          <!-- Botón 2: WhatsApp del socio (número pendiente de configurar) -->
+          <a href="https://wa.me/573042772862?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20de%20JY%20Perfumer%C3%ADa%20y%20quiero%20consultar%20precio."
+             target="_blank" rel="noopener noreferrer"
+             class="wa-btn wa-btn--secondary"
+             aria-label="Contactar por WhatsApp del socio">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+            <div class="wa-btn-text">
+              <span class="wa-btn-label">WhatsApp del Socio</span>
+              <span class="wa-btn-number">Configura el número aquí</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER / CONTACTO
+  ═══════════════════════════════════════════════════════════ -->
+  <footer id="contacto" class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <img src="Logo - Perfumeria.jpeg" alt="JY Perfumería" class="footer-logo" />
+          <p class="footer-brand">JY PERFUMERÍA</p>
+          <p class="footer-tagline">Fragancias Exclusivas · Colombia</p>
+          <p class="footer-desc">
+            Contáctanos por WhatsApp para asesoría personalizada, pedidos
+            y más información sobre nuestras fragancias.
+          </p>
+          <a href="https://wa.me/573126618447?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20de%20JY%20Perfumer%C3%ADa%20y%20quiero%20consultar%20precio."
+             target="_blank" rel="noopener" class="btn-whatsapp-lg" aria-label="Contactar por WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+            Chatear por WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-links-grid">
+          <div class="contact-col">
+            <h3 class="contact-col-title">Catálogo</h3>
+            <a href="#catalogo" class="contact-link">Ver todas las fragancias</a>
+            <a href="#catalogo" onclick="filterByCategory('hombre')" class="contact-link">Perfumes Hombre</a>
+            <a href="#catalogo" onclick="filterByCategory('mujer')"  class="contact-link">Perfumes Mujer</a>
+          </div>
+          <div class="contact-col">
+            <h3 class="contact-col-title">Información</h3>
+            <a href="#consultar" class="contact-link">Consultar Precios</a>
+            <a href="#" class="contact-link">Garantía de Autenticidad</a>
+            <a href="#" class="contact-link">Política de Envíos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 JY Perfumería. Todos los derechos reservados.</p>
+        <p class="footer-credits">Hecho con ♥ en Colombia 🇨🇴</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/573126618447?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20de%20JY%20Perfumer%C3%ADa%20y%20quiero%20consultar%20precio."
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-fab" aria-label="Contactar por WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+    <span class="fab-tooltip">¿Necesitas ayuda?</span>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/products.js"></script>
+  <script src="js/catalog.js"></script>
+
+  <script>
+    // Navbar opaca al hacer scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Menú hamburguesa
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn  = document.getElementById('hamburger-btn');
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    }
+    function closeMenu() {
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('hamburger-btn').setAttribute('aria-expanded', 'false');
+    }
+
+    // Buscador del navbar
+    function toggleNavSearch() {
+      const wrap = document.getElementById('nav-search-input-wrap');
+      const open = wrap.classList.toggle('open');
+      if (open) document.getElementById('nav-search-input').focus();
+      else {
+        document.getElementById('nav-search-input').value = '';
+        searchProducts('');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const navInput = document.getElementById('nav-search-input');
+      if (navInput) {
+        navInput.addEventListener('input', e => {
+          searchProducts(e.target.value);
+          if (e.target.value.length > 0)
+            document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      // Anclas del menú para hombres/mujeres → aplican filtro
+      document.querySelectorAll('a[href="#hombres"]').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          filterByCategory('hombre');
+          document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+      document.querySelectorAll('a[href="#mujeres"]').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          filterByCategory('mujer');
+          document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+</body>
+</html> 
+<div class="product-modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name"
+       onclick="if(event.target === this) closeModal()">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()" aria-label="Cerrar ventana">&times;</button>
+
+      <div class="modal-grid">
+        <div class="modal-image-box">
+          <img id="modal-image" src="" alt="" class="modal-image" />
+        </div>
+
+        <div class="modal-info">
+          <span id="modal-category" class="modal-category"></span>
+          <h3 id="modal-name" class="modal-name"></h3>
+
+          <div class="modal-detail-block">
+            <h4 class="modal-subtitle">Notas Olfativas</h4>
+            <p id="modal-notes" class="modal-notes"></p>
+          </div>
+
+          <div class="modal-detail-block">
+            <h4 class="modal-subtitle">Descripción</h4>
+            <p id="modal-desc" class="modal-desc"></p>
+          </div>
+
+          <div class="modal-wa-actions">
+            <a id="modal-wa-1" href="#" target="_blank" rel="noopener noreferrer" class="wa-btn wa-btn--primary">
+              <div class="wa-btn-text">
+                <span class="wa-btn-label">Chatear por WhatsApp</span>
+                <span class="wa-btn-number">+57 312 661 8447</span>
+              </div>
+            </a>
+            <a id="modal-wa-2" href="#" target="_blank" rel="noopener noreferrer" class="wa-btn wa-btn--secondary">
+              <div class="wa-btn-text">
+                <span class="wa-btn-label">Chatear por WhatsApp</span>
+                <span class="wa-btn-number">+57 304 277 2862</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
